@@ -123,3 +123,7 @@ body {
     height: 8rem;
    
 }
+.book:hover .content {
+    opacity: 1;
+
+}
