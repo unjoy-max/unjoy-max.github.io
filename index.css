@@ -28,8 +28,8 @@ body {
     perspective: 2000px;
     /*视距*/
     /* 设置阴影 */
-    box-shadow: inset 300px 0 30px rgba(0, 0, 0, .2),
-        0 10px 10px rgba(0, 0, 0, .3);
+     box-shadow: inset .5333rem 0 .8rem rgba(0, 0, 0, 0.2),
+        0 .2667rem 2.6667rem rgba(0, 0, 0, .3);
     /* 动画过滤 */
     transition: 1s;
 }
