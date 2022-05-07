@@ -79,7 +79,7 @@ body {
     position: relative;
     transform-origin: left;
     transition: 1s;
-     z-index: 2;
+     z-index: 99;
 }
 
 .book .cover span {
@@ -120,5 +120,5 @@ body {
 .book .content img {
     width: 100%;
     height: 8rem;
-   z-index: -333;
+   
 }
