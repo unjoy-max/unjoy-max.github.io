@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    max-width: 750px;
+    /* 百分百的高度 */
+    height: 100%;
+    /* 弹性布局 */
+    display: flex;
+    /* 主轴居中 */
+    justify-content: center;
+    /* 侧轴居中 */
+    align-items: center;
+    background: #dfb88e;
+}
+
+.book {
+    margin: 2.6667rem 0 0 5.0667rem;
+    width: 8rem;
+    height: 10.6667rem;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    /*3d效果*/
+    perspective: 2000px;
+    /*视距*/
+    /* 设置阴影 */
+    box-shadow: inset 300px 0 30px rgba(0, 0, 0, .2),
+        0 10px 10px rgba(0, 0, 0, .3);
+    /* 动画过滤 */
+    transition: 1s;
+}
+
+/* 鼠标移入，阴影变化+旋转 */
+.book:hover {
+    transform: rotate(-10deg);
+    box-shadow: inset .5333rem 0 .8rem rgba(0, 0, 0, 0.2),
+        0 .2667rem 2.6667rem rgba(0, 0, 0, .3);
+}
+
+.book::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.1333rem;
+    width: 100%;
+    height: .1333rem;
+    background-color: #0d2a50;
+    /* 设置旋转元素的积点位置r */
+    transform-origin: bottom;
+    /* 这个不懂，貌似是翻转的意思 */
+    transform: skew(-45deg);
+    /* 沿X轴倾斜-45度 */
+}
+
+.book::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.1333rem;
+    width: .1333rem;
+    height: 100%;
+    background-color: #3d5a83;
+    transform-origin: left;
+    transform: skewY(-45deg);
+}
+
+/* 封面 */
+.book .cover {
+    width: 100%;
+    height: 100%;
+    background-color: #2a3f5c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-origin: left;
+    transition: 1s;
+}
+
+.book .cover span {
+    position: absolute;
+    right: .8rem;
+    top: .0213rem;
+    background-color: #fff;
+    font-size: 1.0667rem;
+    font-family: '隶书';
+    writing-mode: vertical-lr;
+    /* 使文字变竖向 */
+    padding: .2667rem .1333rem .1333rem .1333rem;
+    /* 字间距 */
+    letter-spacing: .1333rem;
+}
+
+.book:hover .cover {
+    transform: rotateY(-135deg);
+}
+
+.book .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    font-size: 1.0667rem;
+    font-family: "隶书";
+    line-height: 1.3333rem;
+    letter-spacing: .1333rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book .content img {
+    width: 100%;
+    height: 8rem;
+    z-index: -2;
+}
