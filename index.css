@@ -18,6 +18,7 @@ body {
 }
 
 .book {
+    position:realtive;
     margin: 2.6667rem 0 0 5.0667rem;
     width: 8rem;
     height: 10.6667rem;
